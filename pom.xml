@@ -25,6 +25,7 @@
 		<module>eureka-client</module>
 		<module>eureka-client2</module>
 		<module>zuul-demo</module>
+		<module>service-mybatis</module>
 	</modules>
 	<dependencies>
 		<dependency>
