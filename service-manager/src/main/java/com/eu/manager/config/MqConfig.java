@@ -1,4 +1,4 @@
-package com.eu.servicemybatis.config;
+package com.eu.manager.config;
 
 import com.eu.util.amqp.MqConstants;
 import org.springframework.amqp.core.Binding;

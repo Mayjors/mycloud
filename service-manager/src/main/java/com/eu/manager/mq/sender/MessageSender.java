@@ -1,4 +1,4 @@
-package com.eu.servicemybatis.mq.sender;
+package com.eu.manager.mq.sender;
 
 /**
 * @author yuanjie

@@ -1,10 +1,10 @@
-package com.eu.servicemybatis.service.impl;
+package com.eu.manager.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
-import com.eu.servicemybatis.dao.UserDao;
-import com.eu.servicemybatis.model.UserDomain;
-import com.eu.servicemybatis.service.UserService;
+import com.eu.manager.dao.UserDao;
+import com.eu.manager.model.UserDomain;
+import com.eu.manager.service.UserService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;

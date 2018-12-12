@@ -1,7 +1,7 @@
-package com.eu.servicemybatis.controller;
+package com.eu.manager.controller;
 
-import com.eu.servicemybatis.model.UserDomain;
-import com.eu.servicemybatis.service.UserService;
+import com.eu.manager.model.UserDomain;
+import com.eu.manager.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

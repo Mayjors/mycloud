@@ -1,6 +1,6 @@
-package com.eu.servicemybatis.dao;
+package com.eu.manager.dao;
 
-import com.eu.servicemybatis.model.UserDomain;
+import com.eu.manager.model.UserDomain;
 import java.util.List;
 
 public interface UserDao {

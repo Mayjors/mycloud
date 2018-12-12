@@ -1,4 +1,4 @@
-package com.eu.servicemybatis.config;
+package com.eu.manager.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.eu.servicemybatis.dao.UserDao" >
+<mapper namespace="com.eu.manager.dao.UserDao" >
     <sql id="BASE_TABLE">
     t_user
   </sql>
@@ -9,7 +9,7 @@
     user_id,user_name,password,phone
   </sql>
 
-    <insert id="insert" parameterType="com.eu.servicemybatis.model.UserDomain">
+    <insert id="insert" parameterType="com.eu.manager.model.UserDomain">
         INSERT INTO
         <include refid="BASE_TABLE"/>
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -26,7 +26,7 @@
         </trim>
     </insert>
 
-    <select id="selectUsers" resultType="com.eu.servicemybatis.model.UserDomain">
+    <select id="selectUsers" resultType="com.eu.manager.model.UserDomain">
         SELECT
         <include refid="BASE_COLUMN"/>
         FROM

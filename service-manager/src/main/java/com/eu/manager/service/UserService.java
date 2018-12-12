@@ -1,6 +1,6 @@
-package com.eu.servicemybatis.service;
+package com.eu.manager.service;
 
-import com.eu.servicemybatis.model.UserDomain;
+import com.eu.manager.model.UserDomain;
 import com.github.pagehelper.PageInfo;
 
 public interface UserService {

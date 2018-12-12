@@ -1,6 +1,6 @@
-package com.eu.servicemybatis.controller;
+package com.eu.manager.controller;
 
-import com.eu.servicemybatis.mq.sender.MessageSender;
+import com.eu.manager.mq.sender.MessageSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

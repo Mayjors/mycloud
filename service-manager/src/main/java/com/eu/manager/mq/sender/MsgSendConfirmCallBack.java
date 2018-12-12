@@ -1,4 +1,4 @@
-package com.eu.servicemybatis.mq.sender;
+package com.eu.manager.mq.sender;
 
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

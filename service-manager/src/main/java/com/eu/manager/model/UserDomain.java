@@ -1,4 +1,4 @@
-package com.eu.servicemybatis.model;
+package com.eu.manager.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

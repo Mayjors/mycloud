@@ -1,4 +1,4 @@
-package com.eu.servicemybatis.mq.sender;
+package com.eu.manager.mq.sender;
 
 import com.eu.util.amqp.MqConstants;
 import lombok.extern.slf4j.Slf4j;
