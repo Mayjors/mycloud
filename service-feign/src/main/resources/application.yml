@@ -1,0 +1,18 @@
+server:
+  port: 4444
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+spring:
+  application:
+    name: service-feign
+
+# 开启断路器
+feign:
+  hystrix:
+    enabled: true
+
+
