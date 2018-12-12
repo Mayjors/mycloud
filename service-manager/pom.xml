@@ -8,10 +8,10 @@
         <version>1.0.0</version>
     </parent>
     <groupId>com.eu</groupId>
-    <artifactId>service-mybatis</artifactId>
+    <artifactId>service-manager</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>service-mybatis</name>
+    <name>service-manager</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -56,6 +56,12 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-pool2</artifactId>
             <version>2.5.0</version>
+        </dependency>
+        <!-- logback 推送日志文件到logstash -->
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>4.11</version>
         </dependency>
 
         <dependency>

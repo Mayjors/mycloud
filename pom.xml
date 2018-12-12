@@ -26,7 +26,7 @@
 		<module>eureka-client2</module>
 		<module>zuul-demo</module>
 		<module>service-feign</module>
-		<module>service-mybatis</module>
+		<module>service-manager</module>
 	</modules>
 	<dependencies>
 		<dependency>
