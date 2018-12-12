@@ -20,7 +20,7 @@ spring:
       #基本属性
       url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
       username: root
-      password: 219314
+      password: root
       #配置初始化大小/最小/最大
       initial-size: 1
       min-idle: 1
@@ -38,6 +38,21 @@ spring:
       #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password:
+    jedis:
+      pool:
+        # 连接池最大连接数(使用负值表示没有限制)
+        max-active: 8
+        # 连接池最大阻塞等待时间(使用负值表示没有限制)
+        max-wait: -1
+        # 连接池中最大空闲连接
+        max-idle: 5
+        min-idle: 0
+    timeout: 10000
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
