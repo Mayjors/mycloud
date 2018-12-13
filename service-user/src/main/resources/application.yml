@@ -1,0 +1,17 @@
+server:
+  port: 8762
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+# 打印日志
+#logging:
+#  level:
+#    root: INFO
+#    com.springms: DEBUG
+
+spring:
+  application:
+    name: service-user

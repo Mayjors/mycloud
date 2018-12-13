@@ -27,6 +27,9 @@
 		<module>zuul-demo</module>
 		<module>service-feign</module>
 		<module>service-manager</module>
+		<module>service-user</module>
+		<module>service-gateway</module>
+		<module>service-config</module>
 	</modules>
 	<dependencies>
 		<dependency>
