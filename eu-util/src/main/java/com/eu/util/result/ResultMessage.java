@@ -1,4 +1,4 @@
-package com.example.util.result;
+package com.eu.util.result;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
