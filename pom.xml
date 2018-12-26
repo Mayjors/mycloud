@@ -11,7 +11,7 @@
 	<groupId>com.eu</groupId>
 	<artifactId>mycloud</artifactId>
 	<version>1.0.0</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 	<name>mycloud</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -30,6 +30,7 @@
 		<module>service-user</module>
 		<module>service-gateway</module>
 		<module>service-config</module>
+		<module>service-zipkin</module>
 	</modules>
 	<dependencies>
 		<dependency>

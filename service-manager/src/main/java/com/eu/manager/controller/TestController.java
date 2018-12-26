@@ -20,4 +20,11 @@ public class TestController {
     public void send(String s) {
         messageSender.sendInfo(s);
     }
+
+    @RequestMapping("/o")
+    public String o() {
+        System.out.println("----------sdsdsdsd------");
+
+        return "xxx";
+    }
 }
