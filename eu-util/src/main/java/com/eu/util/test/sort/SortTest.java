@@ -1,4 +1,4 @@
-package com.example.util.test.sort;
+package com.eu.util.test.sort;
 
 /**
  * 排序方法

@@ -1,4 +1,4 @@
-package com.example.util.test.array;
+package com.eu.util.test.array;
 
 import java.util.ArrayList;
 import java.util.List;

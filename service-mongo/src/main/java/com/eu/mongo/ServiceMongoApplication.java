@@ -1,12 +1,14 @@
-package com.eu.util;
+package com.eu.mongo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UtilApplication {
+public class ServiceMongoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(UtilApplication.class, args);
+        SpringApplication.run(ServiceMongoApplication.class, args);
     }
+
 }
+

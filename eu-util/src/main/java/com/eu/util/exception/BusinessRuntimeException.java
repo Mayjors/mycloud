@@ -1,4 +1,4 @@
-package com.example.util.exception;
+package com.eu.util.exception;
 
 import com.alibaba.fastjson.JSON;
 import org.slf4j.Logger;
@@ -157,7 +157,7 @@ public class BusinessRuntimeException extends RuntimeException {
         } else {
             message = this.errMsg;
         }
-        BusinessExceptionDTO businessExceptionDTO = new BusinessExceptionDTO(type, errCode, message, params);
+        com.eu.util.exception.BusinessExceptionDTO businessExceptionDTO = new com.eu.util.exception.BusinessExceptionDTO(type, errCode, message, params);
         return JSON.toJSONString(businessExceptionDTO);
     }
 }

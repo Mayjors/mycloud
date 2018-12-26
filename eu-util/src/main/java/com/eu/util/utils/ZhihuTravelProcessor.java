@@ -1,4 +1,4 @@
-package com.example.util.utils;
+package com.eu.util.utils;
 
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;

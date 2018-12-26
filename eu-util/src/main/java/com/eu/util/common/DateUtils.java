@@ -1,4 +1,4 @@
-package com.example.util.common;
+package com.eu.util.common;
 
 import org.springframework.util.StringUtils;
 

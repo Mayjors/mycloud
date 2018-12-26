@@ -1,4 +1,4 @@
-package com.example.util.utils;
+package com.eu.util.utils;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

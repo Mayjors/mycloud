@@ -1,4 +1,4 @@
-package com.example.util.utils;
+package com.eu.util.utils;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;

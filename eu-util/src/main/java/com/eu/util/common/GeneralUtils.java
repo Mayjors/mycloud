@@ -1,4 +1,4 @@
-package com.example.util.common;
+package com.eu.util.common;
 
 /**
  * 通用的工具类

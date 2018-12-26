@@ -21,6 +21,8 @@
 	</properties>
 
 	<modules>
+		<module>eu-pojo</module>
+		<module>eu-util</module>
 		<module>eureka-server</module>
 		<module>eureka-client</module>
 		<module>eureka-client2</module>
@@ -31,6 +33,7 @@
 		<module>service-gateway</module>
 		<module>service-config</module>
 		<module>service-zipkin</module>
+		<module>service-mongo</module>
 	</modules>
 	<dependencies>
 		<dependency>
@@ -74,6 +77,11 @@
 			<dependency>
 				<groupId>com.eu</groupId>
 				<artifactId>eu-util</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.eu</groupId>
+				<artifactId>eu-pojo</artifactId>
 				<version>1.0.0</version>
 			</dependency>
 		</dependencies>

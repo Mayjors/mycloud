@@ -1,0 +1,17 @@
+# eureka注册中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+server:
+  port: 2700
+
+spring:
+  application:
+    name: server-mongo
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: test
+

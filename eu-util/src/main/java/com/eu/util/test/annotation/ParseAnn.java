@@ -1,4 +1,4 @@
-package com.example.util.test.annotation;
+package com.eu.util.test.annotation;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
@@ -11,7 +11,7 @@ public class ParseAnn {
     public static void main(String[] args) {
         try {
             // 使用类加载器加载类
-            Class c = Class.forName("com.example.util.test.annotation.Child");
+            Class c = Class.forName("com.eu.util.test.annotation.Child");
             // 找到类上面的注解
             boolean isExist = c.isAnnotationPresent(Description.class);
             if (isExist) {

@@ -64,11 +64,11 @@
             <artifactId>webmagic-extension</artifactId>
             <version>0.5.3</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.21</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
