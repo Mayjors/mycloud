@@ -1,7 +1,7 @@
 package com.eu.mongo.service;
 
 import com.eu.pojo.bo.Book;
-import com.eu.util.result.ResultMessage;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -16,6 +16,7 @@ import java.util.List;
  * @author yuanjie
  * @date 2018/12/26 16:45
  */
+@Slf4j
 @Service
 public class MongoDbService {
     @Autowired
@@ -26,14 +27,14 @@ public class MongoDbService {
      * @param book
      */
     public void saveBook(Book book) {
-//      log.info("----> [MongoDB save start ]");
+      log.info("----> [MongoDB save start ]");
       book.setCreateTime(new Date());
       book.setUpdateTime(new Date());
       mongoTemplate.save(book);
     }
 
     public List<Book> findAll() {
-//        log.info("----> [MongoDB find start]");
+        log.info("----> [MongoDB find start]");
         return mongoTemplate.findAll(Book.class);
     }
 
@@ -43,7 +44,7 @@ public class MongoDbService {
      * @return
      */
     public Book getBookById(long id) {
-//        log.info("-----> [MongoDB find one start]");
+        log.info("-----> [MongoDB find one start]");
         Query query = new Query(Criteria.where("_id").is(id));
         return mongoTemplate.findOne(query, Book.class);
     }
@@ -54,7 +55,7 @@ public class MongoDbService {
      * @return
      */
     public Book getBookByName(String name) {
-//        log.info("-----> [MongoDB find by name start]");
+        log.info("-----> [MongoDB find by name start]");
         Query query = new Query(Criteria.where("name").is(name));
         return mongoTemplate.findOne(query, Book.class);
     }
@@ -64,7 +65,7 @@ public class MongoDbService {
      * @param book
      */
     public void updateBook(Book book) {
-//        log.info("-----> [MongoDB update start]");
+        log.info("-----> [MongoDB update start]");
         Query query = new Query(Criteria.where("_id").is(book.getId()));
         Update update = new Update().set("publish", book.getPublish())
                 .set("info", book.getInfo())
@@ -82,12 +83,12 @@ public class MongoDbService {
      * @param book
      */
     public void deleteBook(Book book) {
-//        log.info("-----> [MongoDB delete start]");
+        log.info("-----> [MongoDB delete start]");
         mongoTemplate.remove(book);
     }
 
     public void deleteById(long id) {
-//        log.info("-----> [MongoDB delete By Id start]");
+        log.info("-----> [MongoDB delete By Id start]");
         // findOne
         Book book = getBookById(id);
         // delete
