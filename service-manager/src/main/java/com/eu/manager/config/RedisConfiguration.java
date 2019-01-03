@@ -31,14 +31,14 @@ import redis.clients.jedis.JedisPoolConfig;
  * @date 2018/12/12 17:01
  */
 @Slf4j
-@Configuration
-@EnableCaching
+//@Configuration
+//@EnableCaching
 public class RedisConfiguration extends CachingConfigurerSupport {
 
     @Autowired
     private JedisConnectionFactory jedisConnectionFactory;
 
-    @Bean
+//    @Bean
     @Override
     public KeyGenerator keyGenerator() {
         // 设置自动key的生成规则，配置spring boot的注解，进行方法级别的缓存
@@ -58,7 +58,7 @@ public class RedisConfiguration extends CachingConfigurerSupport {
         };
     }
 
-    @Bean
+//    @Bean
     @Override
     public CacheManager cacheManager() {
         // 初始化缓存管理器，在这里我们可以缓存的整体过期时间什么的，我这里默认没有配置
@@ -69,7 +69,7 @@ public class RedisConfiguration extends CachingConfigurerSupport {
         return builder.build();
     }
 
-    @Bean
+//    @Bean
     public RedisTemplate<String, Object> redisTemplate(JedisConnectionFactory jedisConnectionFactory ) {
         //设置序列化
         Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);
@@ -90,7 +90,7 @@ public class RedisConfiguration extends CachingConfigurerSupport {
     }
 
     @Override
-    @Bean
+//    @Bean
     public CacheErrorHandler errorHandler() {
         // 异常处理，当Redis发生异常时，打印日志，但是程序正常走
         log.info("初始化 -> [{}]", "Redis CacheErrorHandler");
@@ -138,7 +138,7 @@ public class RedisConfiguration extends CachingConfigurerSupport {
         @Value("${spring.redis.jedis.pool.max-wait}")
         private long maxWaitMillis;
 
-        @Bean
+//        @Bean
         JedisConnectionFactory jedisConnectionFactory() {
             log.info("Create JedisConnectionFactory successful");
             JedisConnectionFactory factory = new JedisConnectionFactory();
@@ -148,7 +148,7 @@ public class RedisConfiguration extends CachingConfigurerSupport {
             factory.setPassword(password);
             return factory;
         }
-        @Bean
+//        @Bean
         public JedisPool redisPoolFactory() {
             log.info("JedisPool init successful，host -> [{}]；port -> [{}]", host, port);
             JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();

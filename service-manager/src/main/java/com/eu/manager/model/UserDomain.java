@@ -1,9 +1,11 @@
 package com.eu.manager.model;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Data
+@Entity(name ="t_user")
 public class UserDomain {
     @Id
     private Integer userId;

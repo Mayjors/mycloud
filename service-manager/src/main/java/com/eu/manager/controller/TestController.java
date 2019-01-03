@@ -1,6 +1,7 @@
 package com.eu.manager.controller;
 
 import com.eu.manager.mq.sender.MessageSender;
+import com.eu.manager.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +16,8 @@ public class TestController {
 
     @Autowired
     private MessageSender messageSender;
+    @Autowired
+    private TestService testService;
 
     @RequestMapping("/rabbit")
     public void send(String s) {
@@ -24,7 +27,7 @@ public class TestController {
     @RequestMapping("/o")
     public String o() {
         System.out.println("----------sdsdsdsd------");
-
+        testService.test();
         return "xxx";
     }
 }
