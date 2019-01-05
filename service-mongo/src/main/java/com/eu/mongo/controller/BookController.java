@@ -34,7 +34,7 @@ public class BookController {
     public ResultMessage findAll() {
         ResultMessage message = new ResultMessage();
         List<Book> list = mongoDbService.findAll();
-        message.setData(list);
+        message.setValue(list);
         return message;
     }
 
@@ -42,7 +42,7 @@ public class BookController {
     public ResultMessage findOne(@RequestParam long id) {
         ResultMessage resultMessage = new ResultMessage();
         Book book = mongoDbService.getBookById(id);
-        resultMessage.setData(book);
+        resultMessage.setValue(book);
         return resultMessage;
     }
 
@@ -50,7 +50,7 @@ public class BookController {
     public ResultMessage findByName(@RequestParam String name) {
         ResultMessage resultMessage = new ResultMessage();
         Book book = mongoDbService.getBookByName(name);
-        resultMessage.setData(book);
+        resultMessage.setValue(book);
         return resultMessage;
     }
 

@@ -34,6 +34,7 @@
 		<module>service-config</module>
 		<module>service-zipkin</module>
 		<module>service-mongo</module>
+		<module>service-web-support</module>
 	</modules>
 	<dependencies>
 		<dependency>
