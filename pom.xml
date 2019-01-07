@@ -37,6 +37,7 @@
 		<module>service-web-support</module>
 		<module>service-zookeeper</module>
 		<module>service-mybatis</module>
+        <module>service-mybatis-mutil-database</module>
 	</modules>
 	<dependencies>
 		<dependency>
