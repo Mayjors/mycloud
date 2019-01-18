@@ -24,10 +24,16 @@ public class TestController {
         messageSender.sendInfo(s);
     }
 
-    @RequestMapping("/o")
+    @RequestMapping("/redis")
     public String o() {
         System.out.println("----------sdsdsdsd------");
         testService.test();
         return "xxx";
+    }
+
+    @RequestMapping("/xx")
+    public String oo() {
+        System.out.println("--------------xs-------------------");
+        return "xx";
     }
 }
