@@ -38,6 +38,7 @@
 		<module>service-zookeeper</module>
 		<module>service-mybatis</module>
         <module>service-mybatis-mutil-database</module>
+		<module>service-actuator</module>
 	</modules>
 	<dependencies>
 		<dependency>
@@ -66,6 +67,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
 		</dependency>
 	</dependencies>
 
