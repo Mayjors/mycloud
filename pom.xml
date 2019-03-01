@@ -39,6 +39,7 @@
 		<module>service-mybatis</module>
         <module>service-mybatis-mutil-database</module>
 		<module>service-actuator</module>
+		<module>service-flowable</module>
 	</modules>
 	<dependencies>
 		<dependency>
