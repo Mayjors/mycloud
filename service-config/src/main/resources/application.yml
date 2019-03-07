@@ -9,8 +9,8 @@ spring:
           uri: https://github.com/Mayjors/mycloud.git #uri
           search-paths: /** #配置文件目录
       label: master
-      username: 983534678@qq.com #github账号
-      password: yuanjie219314 #github密码
+      username: 1111111111111111 #github账号
+      password: 1111111111111111 #github密码
 
 
 server:
