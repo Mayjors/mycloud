@@ -1,5 +1,6 @@
 package com.eu.mongo.service;
 
+import com.eu.mongo.dao.TestMongoRepository;
 import com.eu.pojo.bo.Book;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author yuanjie
@@ -21,7 +23,15 @@ import java.util.List;
 public class MongoDbService {
     @Autowired
     private MongoTemplate mongoTemplate;
+    @Autowired
+    private TestMongoRepository testMongoRepository;
 
+    public List<Book> find() {
+        Optional<Book> byId = testMongoRepository.findById(1L);
+        Book book = byId.get();
+        book = testMongoRepository.findByName("三国演义");
+        return testMongoRepository.findAll();
+    }
     /**
      * 保存对象
      * @param book

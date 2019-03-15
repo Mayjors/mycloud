@@ -34,6 +34,7 @@ public class BookController {
     public ResultMessage findAll() {
         ResultMessage message = new ResultMessage();
         List<Book> list = mongoDbService.findAll();
+        list = mongoDbService.find();
         message.setValue(list);
         return message;
     }
