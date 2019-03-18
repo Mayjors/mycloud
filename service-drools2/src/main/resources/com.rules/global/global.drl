@@ -1,0 +1,17 @@
+package com.rules
+import com.eu.servicedrools2.model.Risk
+import com.eu.servicedrools2.model.Message
+
+global com.eu.servicedrools2.service.EmailService emailService
+
+rule "test-global"
+
+agenda-group "test-global-group"
+
+when
+then
+    Message message = new Message();
+    message.setRule(drools.getRule().getName());
+    message.setDesc("to send email!");
+    emailService.sendEmail(message);
+end
