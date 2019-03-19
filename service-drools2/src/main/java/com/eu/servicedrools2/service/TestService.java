@@ -3,6 +3,9 @@ package com.eu.servicedrools2.service;
 import com.eu.servicedrools2.model.Car;
 import com.eu.servicedrools2.model.Customer;
 import org.kie.api.KieServices;
+import org.kie.api.builder.KieBuilder;
+import org.kie.api.builder.KieFileSystem;
+import org.kie.api.builder.Results;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.springframework.stereotype.Service;
@@ -42,5 +45,22 @@ public class TestService {
         KieContainer kieContainer = kieServices.getKieClasspathContainer();
         KieSession kieSession = kieContainer.newKieSession("all-rules");
         return kieSession;
+    }
+
+    public void kessionTest() {
+        KieServices kieServices = KieServices.Factory.get();
+        KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
+        kieFileSystem.write("","");
+        KieBuilder kieBuilder = kieServices.newKieBuilder(kieFileSystem).buildAll();
+        Results results = kieBuilder.getResults();
+        if (results.hasMessages(org.kie.api.builder.Message.Level.ERROR)) {
+            System.out.println(results.getMessages());
+            throw new IllegalStateException("### errors ###");
+        }
+        KieContainer kieContainer = kieServices.newKieContainer(kieServices.getRepository().getDefaultReleaseId());
+        KieSession kieSession = kieContainer.newKieSession();
+
+        kieSession.insert("");
+        kieSession.fireAllRules();
     }
 }

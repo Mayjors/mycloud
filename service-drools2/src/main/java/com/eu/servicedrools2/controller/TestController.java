@@ -1,5 +1,6 @@
 package com.eu.servicedrools2.controller;
 
+import com.eu.servicedrools2.service.KieFileSystemTest;
 import com.eu.servicedrools2.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,4 +21,14 @@ public class TestController {
         testService.test();
         return "x";
     }
+
+    @Autowired
+    private KieFileSystemTest kieFileSystemTest;
+
+    @GetMapping("/kie")
+    public String t() {
+        kieFileSystemTest.handle();
+        return "s";
+    }
+
 }
