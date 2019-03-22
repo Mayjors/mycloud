@@ -28,6 +28,7 @@ public class ConditionalNamedConsequencesTest  {
 
         kieSession.dispose();
         System.out.println("Fire " + count + " rules!");
+        System.out.println(customer);
     }
 
     @Test
