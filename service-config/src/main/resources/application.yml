@@ -1,13 +1,14 @@
 
 spring:
   application:
-    name: gateway
+    name: service-config
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/Mayjors/mycloud.git #uri
-          search-paths: /** #配置文件目录
+          uri: ${config.repo.uri:https://github.com/Mayjors/mycloud.git} #uri
+#          search-paths: /** #配置文件目录
+          search-paths: config-repo #配置文件目录
       label: master
       username: 1111111111111111 #github账号
       password: 1111111111111111 #github密码
@@ -16,9 +17,9 @@ spring:
 server:
   port: 8768
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
 
 
