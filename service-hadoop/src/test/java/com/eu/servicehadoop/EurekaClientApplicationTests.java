@@ -1,4 +1,4 @@
-package com.eu.eurekaclient;
+package com.eu.servicespark;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
