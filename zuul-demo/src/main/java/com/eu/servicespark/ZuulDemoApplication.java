@@ -1,4 +1,4 @@
-package com.eu.eurekaclient;
+package com.eu.servicespark;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
