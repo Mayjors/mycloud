@@ -1,4 +1,4 @@
-package com.eu.servicespark;
+package com.eu.servicehadoop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,9 +6,9 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication
 @EnableZuulProxy
-public class ServiceSparkApplication {
+public class ServiceHadoopApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServiceSparkApplication.class, args);
+        SpringApplication.run(ServiceHadoopApplication.class, args);
     }
 }

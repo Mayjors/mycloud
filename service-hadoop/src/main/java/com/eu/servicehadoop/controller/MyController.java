@@ -1,12 +1,8 @@
-package com.eu.servicespark.controller;
+package com.eu.servicehadoop.controller;
 
-import com.eu.servicespark.service.SparkTestService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Map;
 
 /**
  * @author yuanjie
@@ -20,21 +16,6 @@ public class MyController {
         return "hello I am is spring-serviceZuul"; //测试代码直接返回一个字符串，不再调用service层等等。
     }
 
-    @Autowired
-    private SparkTestService sparkTestService;
 
-    @RequestMapping("/demo/top10")
-    public Map<String,Object> calculateTopTen() {
-        return sparkTestService.calculateTopTen();
-    }
 
-    @RequestMapping("/demo/exercise")
-    public void exercise() {
-        sparkTestService.sparkExerciseDemo();
-    }
-
-    @RequestMapping("/demo/stream")
-    public void streamingDemo() throws InterruptedException {
-        sparkTestService.sparkStreaming();
-    }
 }

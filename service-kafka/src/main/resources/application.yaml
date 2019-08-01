@@ -1,0 +1,7 @@
+server:
+  port: 10002
+spring:
+  kafka:
+    bootstrap-servers: 47.107.170.10:9092
+    consumer:
+      group-id: mygroup

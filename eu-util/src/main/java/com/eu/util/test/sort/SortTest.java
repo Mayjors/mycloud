@@ -1,5 +1,7 @@
 package com.eu.util.test.sort;
 
+import java.util.concurrent.*;
+
 /**
  * 排序方法
  * @author yuanjie
@@ -7,7 +9,11 @@ package com.eu.util.test.sort;
  */
 public class SortTest {
 
+    private static CountDownLatch countDownLatch = new CountDownLatch(1);
     public static void main(String[] args) {
+        BlockingQueue<Runnable> workQueue = new ArrayBlockingQueue(100);
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(10, 20, 50, TimeUnit.MILLISECONDS, workQueue);
+        
         long start = System.currentTimeMillis();
         int[] a = {10, 100, 3, 51, 29, 72, 88, 30};
 //        bubbleSort(a);
@@ -18,6 +24,7 @@ public class SortTest {
         for (int x : a) {
             System.out.print(x + " ");
         }
+        String s = null;
         System.out.println();
         long end = System.currentTimeMillis();
         System.out.println((end -start));
