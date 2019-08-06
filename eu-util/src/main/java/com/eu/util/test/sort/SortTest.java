@@ -1,7 +1,5 @@
 package com.eu.util.test.sort;
 
-import java.util.concurrent.*;
-
 /**
  * 排序方法
  * @author yuanjie
@@ -9,23 +7,15 @@ import java.util.concurrent.*;
  */
 public class SortTest {
 
-    private static CountDownLatch countDownLatch = new CountDownLatch(1);
     public static void main(String[] args) {
-        BlockingQueue<Runnable> workQueue = new ArrayBlockingQueue(100);
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(10, 20, 50, TimeUnit.MILLISECONDS, workQueue);
-        
         long start = System.currentTimeMillis();
-        int[] a = {10, 100, 3, 51, 29, 72, 88, 30};
+        int[] a = {10, 100, 3, 51, 29, 72};
 //        bubbleSort(a);
 //        insertionSort(a);
-//        selectSort(a);
-        shellSort(a);
-//        quickSort(a, 0, a.length - 1);
+        quickSort(a, 0, a.length - 1);
         for (int x : a) {
             System.out.print(x + " ");
         }
-        String s = null;
-        System.out.println();
         long end = System.currentTimeMillis();
         System.out.println((end -start));
     }
@@ -65,24 +55,6 @@ public class SortTest {
     }
 
     /**
-     * 插入排序2
-     * @param numbers
-     */
-    public static void insertionSort2(int[] numbers) {
-        int len = numbers.length;
-        int preIndex, current;
-        for (int i=1; i< len; i++) {
-            preIndex = i -1;
-            current = numbers[i];
-            while (preIndex >= 0 && numbers[preIndex] > current) {
-                numbers[preIndex + 1] = numbers[preIndex];
-                preIndex --;
-            }
-            numbers[preIndex + 1] = current;
-        }
-    }
-
-    /**
      * 选择排序法
      * @param numbers
      */
@@ -100,33 +72,6 @@ public class SortTest {
                 t = numbers[i];
                 numbers[i] = numbers[index];
                 numbers[index] = t;
-            }
-        }
-    }
-
-    /**
-     * 希尔排序
-     * @param arr
-     */
-    public static void shellSort(int[] arr) {
-        int len = arr.length;
-        for (int gap = len/2; gap>=1; gap=gap/2) {
-            // 对子序列进行直接插入排序
-            for (int i=gap + 1; i < len; i++) {
-                for (int j = i-gap; j>=0 && arr[j] > arr[j+gap]; j = j-gap) {
-//                    insertionSort();
-                }
-            }
-        }
-        for (int gap = len/2; gap>=1; gap=gap/2) {
-            for (int i = gap; i < len; i++) {
-                int j = i;
-                int current = arr[i];
-                while (j-gap >= 0 && current < arr[j-gap]) {
-                    arr[j] = arr[j-gap];
-                    j = j-gap;
-                }
-                arr[j] = current;
             }
         }
     }
