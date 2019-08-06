@@ -1,4 +1,4 @@
-package com.eu.eurekaclient.config;
+package com.eu.servicespark.config;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;

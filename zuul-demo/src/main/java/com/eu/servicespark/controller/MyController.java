@@ -1,4 +1,4 @@
-package com.eu.servicehadoop.controller;
+package com.eu.servicespark.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,7 +15,4 @@ public class MyController {
     public String info() {
         return "hello I am is spring-serviceZuul"; //测试代码直接返回一个字符串，不再调用service层等等。
     }
-
-
-
 }
